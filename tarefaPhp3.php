@@ -166,25 +166,23 @@ $ceu = [
 
 //EXERCICIO 13
 $ceu = [
-    ["Argentina" => ["Buenos Aires", "Córdoba", "Santa Fé"],"naAmerica" => True],
-
-    ["Brasil" => ["Brasília", "Rio de Janeiro", "São Paulo"], "naAmerica" => False],
-    //"Colômbia" => ["Cartagena", "Bogotá", "Barranquilla"],
-    //"França" => ["Paris", "Nantes", "Lyon"],
-    //"Itália" => ["Roma", "Milão", "Veneza"],
-    //"Alemanha" => ["Munique", "Berlim", "Frankfurt"]
+    "Argentina" => ["cidades" => ["Buenos Aires", "Córdoba", "Santa Fé"],"naAmerica" => True],
+    "Brasil" => ["cidades" => ["Brasília", "Rio de Janeiro", "São Paulo"], "naAmerica" => True],
+    "Colômbia" => ["cidades" => ["Cartagena", "Bogotá", "Barranquilla"], "naAmerica" => True],
+    "França" => ["cidades" => ["Paris", "Nantes", "Lyon"], "naAmerica" => False],
+    "Itália" => ["cidades" => ["Roma", "Milão", "Veneza"], "naAmerica" => False],
+    "Alemanha" => ["cidades" => ["Munique", "Berlim", "Frankfurt"], "naAmerica" => False],
     ];
 
-    foreach($ceu as $pais => $cidades){
-        if($pais["naAmerica"] = True){
-            foreach($pais as $pais2){
+    foreach($ceu as $pais => $infos){
+        if($infos["naAmerica"] == True){
                 echo "As cidades da $pais são: <br>";
-              foreach($pais[0] as $cidades){
-                                
+              foreach($infos["cidades"] as $cidade){
+                echo "$cidade"."<br>";                  
               }
             }
         }
-    }
+    
 
     
 ?>
